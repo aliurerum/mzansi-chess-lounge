@@ -138,6 +138,16 @@
       color: var(--text);
       font-size: 19px;
     }
+    
+.icon-button svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
     .icon-button:hover {
       background: var(--panel-light);
@@ -844,14 +854,38 @@
         <a href="#about">About</a>
       </nav>
 
-      <div class="header-actions">
-        <button class="icon-button" aria-label="Search"
-          onclick="showNotice('Search will be available when the website features are connected.')">⌕</button>
-        <button class="icon-button" aria-label="Notifications"
-          onclick="showNotice('You have no new demo notifications.')">♧</button>
-        <button class="icon-button" aria-label="Profile"
-          onclick="showNotice('Member profiles will be available after registration is implemented.')">♙</button>
-      </div>
+      
+<div class="header-actions">
+
+  <!-- Search Icon -->
+  <button class="icon-button" aria-label="Search"
+    onclick="showNotice('Search will be available soon.')">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"></circle>
+      <path d="m16 16 4 4"></path>
+    </svg>
+  </button>
+
+  <!-- Notification Bell Icon -->
+  <button class="icon-button" aria-label="Notifications"
+    onclick="showNotice('You have no new demo notifications.')">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+      <path d="M10 21h4"></path>
+    </svg>
+  </button>
+
+  <!-- Profile Icon -->
+  <button class="icon-button" aria-label="Profile"
+    onclick="showNotice('Your member profile will be available after registration is implemented.')">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="8" r="4"></circle>
+      <path d="M4 21a8 8 0 0 1 16 0"></path>
+    </svg>
+  </button>
+
+</div>
+
 
     </div>
   </header>
